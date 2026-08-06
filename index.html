@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>3Dcorelab | 3D Baskı</title>
+
+  <meta name="description" content="3Dcorelab - Anahtarlık modelleri, figürler ve çakmak kılıfları.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+  <div class="header-inner">
+
+    <a href="#anasayfa" class="logo">
+      3D<span>corelab</span>
+    </a>
+
+    <nav class="desktop-menu">
+      <a href="#anasayfa">Ana Sayfa</a>
+      <a href="#kategoriler">Kategoriler</a>
+      <a href="#anahtarliklar">Anahtarlıklar</a>
+      <a href="#figurler">Figürler</a>
+      <a href="#kiliflar">Çakmak Kılıfları</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <a
+        href="https://www.instagram.com/3Dcorelab/"
+        target="_blank"
+        class="instagram-button">
+        📸 Instagram
+      </a>
+
+      <button class="search-button" onclick="openSearch()">
+        🔎
+      </button>
+
+      <button class="cart-button" onclick="openCart()">
+        🛒
+        <span id="cartCount">0</span>
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- ARAMA -->
+
+<div id="searchBox" class="search-box">
+
+  <div class="search-inner">
+
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Ürün ara..."
+      oninput="searchProducts()">
+
+    <button onclick="closeSearch()">✕</button>
+
+  </div>
+
+</div>
+
+
+<!-- HERO -->
+
+<section id="anasayfa" class="hero">
+
+  <div class="hero-background"></div>
+
+  <div class="hero-content">
+
+    <div class="hero-badge">
+      ✨ 3D BASKI & ÖZEL TASARIM
+    </div>
+
+    <h1>
+      Hayalindeki ürünü
+      <span>gerçeğe dönüştür.</span>
+    </h1>
+
+    <p>
+      Anahtarlık modelleri, figürler ve çakmak kılıfları.
+      Özel tasarımlarını 3D baskıyla gerçeğe dönüştürüyoruz.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#kategoriler" class="primary-button">
+        Kategorileri Keşfet →
+      </a>
+
+      <a
+        href="https://www.instagram.com/3Dcorelab/"
+        target="_blank"
+        class="instagram-large">
+        📸 Instagram
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-decoration">
+
+    <div class="floating-object object-one">🔑</div>
+    <div class="floating-object object-two">🧸</div>
+    <div class="floating-object object-three">🔥</div>
+
+    <div class="hero-circle">
+      <strong>3D</strong>
+      <span>CORELAB</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- KATEGORİLER -->
+
+<section id="kategoriler" class="categories">
+
+  <div class="section-title">
+
+    <span>KATEGORİLER</span>
+
+    <h2>Ne arıyorsun?</h2>
+
+    <p>
+      Bir kategori seç, modelleri hemen gör.
+    </p>
+
+  </div>
+
+
+  <div class="category-grid">
+
+
+    <!-- ANAHTARLIK -->
+
+    <button
+      class="category-card"
+      onclick="toggleCategory('anahtarliklar', this)">
+
+      <div class="category-image keychain-bg">
+        🔑
+      </div>
+
+      <div class="category-content">
+
+        <span class="category-number">
+          01
+        </span>
+
+        <h3>
+          Anahtarlık Modelleri
+        </h3>
+
+        <p>
+          Birbirinden farklı 3D baskı
+          anahtarlık modelleri.
+        </p>
+
+        <strong>
+          Modelleri Gör ↓
+        </strong>
+
+      </div>
+
+    </button>
+
+
+    <!-- FİGÜR -->
+
+    <button
+      class="category-card"
+      onclick="toggleCategory('figurler', this)">
+
+      <div class="category-image figure-bg">
+        🧸
+      </div>
+
+      <div class="category-content">
+
+        <span class="category-number">
+          02
+        </span>
+
+        <h3>
+          Figürler
+        </h3>
+
+        <p>
+          Koleksiyonuna renk katacak
+          3D baskı figürler.
+        </p>
+
+        <strong>
+          Modelleri Gör ↓
+        </strong>
+
+      </div>
+
+    </button>
+
+
+    <!-- ÇAKMAK KILIFI -->
+
+    <button
+      class="category-card"
+      onclick="toggleCategory('kiliflar', this)">
+
+      <div class="category-image lighter-bg">
+        🔥
+      </div>
+
+      <div class="category-content">
+
+        <span class="category-number">
+          03
+        </span>
+
+        <h3>
+          Çakmak Kılıfları
+        </h3>
+
+        <p>
+          Şık ve özgün 3D baskı
+          çakmak kılıfları.
+        </p>
+
+        <strong>
+          Modelleri Gör ↓
+        </strong>
+
+      </div>
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ANAHTARLIKLAR ================= -->
+
+<section
+  id="anahtarliklar"
+  class="products-section category-products">
+
+  <div class="products-heading">
+
+    <div>
+
+      <span>01 • ANAHTARLIK</span>
+
+      <h2>Anahtarlık Modelleri</h2>
+
+    </div>
+
+    <button onclick="closeCategory('anahtarliklar')">
+      Kapat ↑
+    </button>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <article
+      class="product-card"
+      data-name="Özel Tasarım Anahtarlık">
+
+      <div class="product-image">
+        <div class="product-placeholder">
+          ÜRÜN<br>FOTOĞRAFI
+        </div>
+
+        <span class="product-label">
+          YENİ
+        </span>
+
+        <button
+          class="quick-button"
+          onclick="addToCart('Özel Tasarım Anahtarlık',60)">
+          +
+        </button>
+      </div>
+
+      <div class="product-details">
+
+        <span>ANAHTARLIK</span>
+
+        <h3>
+          Özel Tasarım Anahtarlık
+        </h3>
+
+        <p>
+          Dayanıklı ve özel tasarım 3D baskı anahtarlık.
+        </p>
+
+        <div class="product-footer">
+
+          <strong>₺60</strong>
+
+          <button
+            onclick="addToCart('Özel Tasarım Anahtarlık',60)">
+            Sepete Ekle
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="product-card"
+      data-name="3D Harf Anahtarlık">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          ÜRÜN<br>FOTOĞRAFI
+        </div>
+
+        <button
+          class="quick-button"
+          onclick="addToCart('3D Harf Anahtarlık',50)">
+          +
+        </button>
+
+      </div>
+
+      <div class="product-details">
+
+        <span>ANAHTARLIK</span>
+
+        <h3>
+          3D Harf Anahtarlık
+        </h3>
+
+        <p>
+          İsme özel harf tasarımlı anahtarlık.
+        </p>
+
+        <div class="product-footer">
+
+          <strong>₺50</strong>
+
+          <button
+            onclick="addToCart('3D Harf Anahtarlık',50)">
+            Sepete Ekle
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="product-card"
+      data-name="Karakter Anahtarlık">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          ÜRÜN<br>FOTOĞRAFI
+        </div>
+
+        <button
+          class="quick-button"
+          onclick="addToCart('Karakter Anahtarlık',70)">
+          +
+        </button>
+
+      </div>
+
+      <div class="product-details">
+
+        <span>ANAHTARLIK</span>
+
+        <h3>
+          Karakter Anahtarlık
+        </h3>
+
+        <p>
+          Eğlenceli karakter tasarımlı anahtarlık.
+        </p>
+
+        <div class="product-footer">
+
+          <strong>₺70</strong>
+
+          <button
+            onclick="addToCart('Karakter Anahtarlık',70)">
+            Sepete Ekle
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FİGÜRLER ================= -->
+
+<section
+  id="figurler"
+  class="products-section category-products">
+
+  <div class="products-heading">
+
+    <div>
+
+      <span>02 • FİGÜR</span>
+
+      <h2>Figürler</h2>
+
+    </div>
+
+    <button onclick="closeCategory('figurler')">
+      Kapat ↑
+    </button>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <article
+      class="product-card"
+      data-name="Mini Karakter Figür">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          ÜRÜN<br>FOTOĞRAFI
+        </div>
+
+        <span class="product-label">
+          YENİ
+        </span>
+
+        <button
+          class="quick-button"
+          onclick="addToCart('Mini Karakter Figür',150)">
+          +
+        </button>
+
+      </div>
+
+      <div class="product-details">
+
+        <span>FİGÜR</span>
+
+        <h3>
+          Mini Karakter Figür
+        </h3>
+
+        <p>
+          Detaylı ve dekoratif 3D baskı figür.
+        </p>
+
+        <div class="product-footer">
+
+          <strong>₺150</strong>
+
+          <button
+            onclick="addToCart('Mini Karakter Figür',150)">
+            Sepete Ekle
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="product-card"
+      data-name="Oyun Karakter Figürü">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          ÜRÜN<br>FOTOĞRAFI
+        </div>
+
+        <button
+          class="quick-button"
+          onclick="addToCart('Oyun Karakter Figürü',200)">
+          +
+        </button>
+
+      </div>
+
+      <div class="product-details">
+
+        <span>FİGÜR</span>
+
+        <h3>
+          Oyun Karakter Figürü
+        </h3>
+
+        <p>
+          Koleksiyon için özel tasarım figür.
+        </p>
+
+        <div class="product-footer">
+
+          <strong>₺200</strong>
+
+          <button
+            onclick="addToCart('Oyun Karakter Figürü',200)">
+            Sepete Ekle
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="product-card"
+      data-name="Özel Tasarım Figür">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          ÜRÜN<br>FOTOĞRAFI
+        </div>
+
+        <button
+          class="quick-button"
+          onclick="addToCart('Özel Tasarım Figür',250)">
+          +
+        </button>
+
+      </div>
+
+      <div class="product-details">
+
+        <span>FİGÜR</span>
+
+        <h3>
+          Özel Tasarım Figür
+        </h3>
+
+        <p>
+          İsteğe özel hazırlanabilen figür.
+        </p>
+
+        <div class="product-footer">
+
+          <strong>₺250</strong>
+
+          <button
+            onclick="addToCart('Özel Tasarım Figür',250)">
+            Sepete Ekle
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ÇAKMAK KILIFLARI ================= -->
+
+<section
+  id="kiliflar"
+  class="products-section category-products">
+
+  <div class="products-heading">
+
+    <div>
+
+      <span>03 • ÇAKMAK KILIFI</span>
+
+      <h2>Çakmak Kılıfları</h2>
+
+    </div>
+
+    <button onclick="closeCategory('kiliflar')">
+      Kapat ↑
+    </button>
+
+  </div>
+
+
+  <div class="product-grid">
+
+
+    <article
+      class="product-card"
+      data-name="Standart Çakmak Kılıfı">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          ÜRÜN<br>FOTOĞRAFI
+        </div>
+
+        <span class="product-label">
+          POPÜLER
+        </span>
+
+        <button
+          class="quick-button"
+          onclick="addToCart('Standart Çakmak Kılıfı',100)">
+          +
+        </button>
+
+      </div>
+
+      <div class="product-details">
+
+        <span>ÇAKMAK KILIFI</span>
+
+        <h3>
+          Standart Çakmak Kılıfı
+        </h3>
+
+        <p>
+          Şık ve dayanıklı 3D baskı kılıf.
+        </p>
+
+        <div class="product-footer">
+
+          <strong>₺100</strong>
+
+          <button
+            onclick="addToCart('Standart Çakmak Kılıfı',100)">
+            Sepete Ekle
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="product-card"
+      data-name="Desenli Çakmak Kılıfı">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          ÜRÜN<br>FOTOĞRAFI
+        </div>
+
+        <button
+          class="quick-button"
+          onclick="addToCart('Desenli Çakmak Kılıfı',120)">
+          +
+        </button>
+
+      </div>
+
+      <div class="product-details">
+
+        <span>ÇAKMAK KILIFI</span>
+
+        <h3>
+          Desenli Çakmak Kılıfı
+        </h3>
+
+        <p>
+          Farklı desen ve renk seçenekleri.
+        </p>
+
+        <div class="product-footer">
+
+          <strong>₺120</strong>
+
+          <button
+            onclick="addToCart('Desenli Çakmak Kılıfı',120)">
+            Sepete Ekle
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <article
+      class="product-card"
+      data-name="Özel Tasarım Çakmak Kılıfı">
+
+      <div class="product-image">
+
+        <div class="product-placeholder">
+          ÜRÜN<br>FOTOĞRAFI
+        </div>
+
+        <button
+          class="quick-button"
+          onclick="addToCart('Özel Tasarım Çakmak Kılıfı',150)">
+          +
+        </button>
+
+      </div>
+
+      <div class="product-details">
+
+        <span>ÇAKMAK KILIFI</span>
+
+        <h3>
+          Özel Tasarım Kılıf
+        </h3>
+
+        <p>
+          İsteğe özel tasarlanabilen çakmak kılıfı.
+        </p>
+
+        <div class="product-footer">
+
+          <strong>₺150</strong>
+
+          <button
+            onclick="addToCart('Özel Tasarım Çakmak Kılıfı',150)">
+            Sepete Ekle
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ÖZEL TASARIM -->
+
+<section class="custom-order">
+
+  <div class="custom-content">
+
+    <span>ÖZEL SİPARİŞ</span>
+
+    <h2>
+      Aklındaki tasarımı
+      <strong>birlikte üretelim.</strong>
+    </h2>
+
+    <p>
+      Hazır modeller dışında kendi tasarımını da
+      3D baskıyla ürettirebilirsin.
+    </p>
+
+    <a
+      href="https://wa.me/905516305006?text=Merhaba%203Dcorelab%2C%20%C3%B6zel%20tasar%C4%B1m%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      target="_blank"
+      class="primary-button">
+      WhatsApp'tan Bilgi Al →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-top">
+
+    <div>
+
+      <div class="footer-logo">
+        3D<span>corelab</span>
+      </div>
+
+      <p>
+        3D baskı ürünleri, özel tasarımlar
+        ve kişiye özel üretimler.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <div>
+
+        <h4>Kategoriler</h4>
+
+        <a href="#anahtarliklar">
+          Anahtarlık Modelleri
+        </a>
+
+        <a href="#figurler">
+          Figürler
+        </a>
+
+        <a href="#kiliflar">
+          Çakmak Kılıfları
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Sosyal</h4>
+
+        <a
+          href="https://www.instagram.com/3Dcorelab/"
+          target="_blank">
+          Instagram
+        </a>
+
+        <a
+          href="https://wa.me/905516305006"
+          target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 3Dcorelab
+    </span>
+
+    <span>
+      3D Baskı & Özel Tasarım
+    </span>
+
+  </div>
+
+</footer>
+
+
+<!-- SEPET -->
+
+<div
+  id="overlay"
+  class="overlay"
+  onclick="closeCart()">
+</div>
+
+
+<div
+  id="cartPanel"
+  class="cart-panel">
+
+  <div class="cart-header">
+
+    <h2>
+      Sepetim
+    </h2>
+
+    <button onclick="closeCart()">
+      ✕
+    </button>
+
+  </div>
+
+
+  <div
+    id="cartItems"
+    class="cart-items">
+
+    <p class="empty-cart">
+      Sepetin şu anda boş.
+    </p>
+
+  </div>
+
+
+  <div class="cart-bottom">
+
+    <div>
+
+      <strong>
+        Toplam
+      </strong>
+
+      <strong id="cartTotal">
+        ₺0
+      </strong>
+
+    </div>
+
+    <button onclick="checkout()">
+      WhatsApp'tan Sipariş Ver
+    </button>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
