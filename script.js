@@ -186,7 +186,7 @@ function checkout() {
     "\n💰 Toplam: ₺" +
     total +
     "\n\n" +
-    "Sipariş hakkında bilgi almak istiyorum.";
+    "Siparişim hakkında bilgi almak istiyorum.";
   window.open(
     "https://wa.me/" +
     phoneNumber +
